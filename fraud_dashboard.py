@@ -233,11 +233,11 @@ with st.sidebar:
     st.markdown(f"**🎯 Fraud Rate:** `{fraud_count/len(y):.2%}`")
     st.markdown("---")
     st.markdown("**Navigation**")
-    st.markdown("""
-    - 📊 Tab 1: Summary Stats
-    - 🏆 Tab 2: Model Competition
-    - ⚙️ Tab 3: Hyperparameter Tuning
-    """)
+    nav = st.radio(
+        "Navigation",
+        ["📊 Summary Statistics", "🏆 Model Competition", "⚙️ Hyperparameter Tuning"],
+        label_visibility="collapsed"
+    )
     st.markdown("---")
     st.markdown("<p style='color:#adb5bd; font-size:0.75rem; text-align:center;'>Cross-Validation: 5-Fold Stratified</p>",
                 unsafe_allow_html=True)
@@ -264,16 +264,15 @@ for col, label, value, delta_txt in [
 st.markdown("<br>", unsafe_allow_html=True)
 
 # ── Main Tabs ─────────────────────────────────────────────────────────────────
-tab1, tab2, tab3 = st.tabs([
-    "📊  Summary Statistics",
-    "🏆  Model Competition",
-    "⚙️  Hyperparameter Tuning",
-])
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONTENT LOGIC
+# ═══════════════════════════════════════════════════════════════════════════════
+
+if nav == "📊 Summary Statistics":
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 1: SUMMARY STATISTICS
 # ═══════════════════════════════════════════════════════════════════════════════
-with tab1:
     st.markdown("<div class='section-header'>Dataset Overview</div>", unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -423,7 +422,7 @@ with tab1:
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 2: MODEL COMPETITION
 # ═══════════════════════════════════════════════════════════════════════════════
-with tab2:
+elif nav == "🏆 Model Competition":
     st.markdown("<div class='section-header'>Classification Competition Leaderboard</div>",
                 unsafe_allow_html=True)
 
@@ -616,7 +615,7 @@ with tab2:
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 3: HYPERPARAMETER TUNING
 # ═══════════════════════════════════════════════════════════════════════════════
-with tab3:
+elif nav == "⚙️ Hyperparameter Tuning":
     st.markdown("<div class='section-header'>Interactive Hyperparameter Tuning</div>",
                 unsafe_allow_html=True)
 
