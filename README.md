@@ -1,0 +1,106 @@
+# Credit Card Fraud Detection Dashboard
+
+An interactive machine learning dashboard for credit card fraud detection —
+built with Streamlit, scikit-learn, XGBoost, and LightGBM.
+
+---
+
+## 📁 Files Included
+
+| File | Description |
+|------|-------------|
+| `fraud_dashboard.py` | Main Streamlit dashboard |
+| `fraud_competition.py` | ML competition + PowerPoint generator |
+| `credit.Card.Fraud.csv` | Dataset (3,492 transactions) |
+| `fraud_results.csv` | Pre-computed competition leaderboard |
+| `fraud_tuning_results.csv` | Hyperparameter tuning results |
+| `requirements.txt` | Required Python libraries |
+| `install_and_run.bat` | First-time setup + launch (Windows) |
+| `run_dashboard.bat` | Launch only (after setup) |
+
+---
+
+## ⚙️ Requirements
+
+- **Python 3.10 or higher** — download from https://www.python.org/downloads/
+  - ✅ During installation, check **"Add Python to PATH"**
+- **pip** — comes bundled with Python
+
+---
+
+## 🚀 Getting Started
+
+### First Time (installs libraries + launches dashboard)
+```
+Double-click:  install_and_run.bat
+```
+This will:
+1. Install all required Python libraries automatically
+2. Launch the dashboard
+3. Open your browser at **http://localhost:8501**
+
+### After First Setup (launch only)
+```
+Double-click:  run_dashboard.bat
+```
+
+### Manual (Terminal / Command Prompt)
+```bash
+pip install -r requirements.txt
+streamlit run fraud_dashboard.py
+```
+
+---
+
+## 📊 Dashboard Features
+
+| Tab | Content |
+|-----|---------|
+| 📊 Summary Statistics | Dataset overview, feature distributions, correlation heatmap |
+| 🏆 Model Competition | Leaderboard of 8 algorithms ranked by F1-score |
+| ⚙️ Hyperparameter Tuning | Interactive model training with adjustable parameters |
+
+---
+
+## 🏆 Competition Results (pre-computed)
+
+| Rank | Model | F1 Score | AUC-ROC |
+|------|-------|----------|---------|
+| 🥇 1 | Random Forest | 0.9886 | 0.9800 |
+| 🥈 2 | LightGBM | 0.9876 | 0.9809 |
+| 🥉 3 | XGBoost | 0.9874 | 0.9810 |
+
+---
+
+## 📦 Library Versions (from requirements.txt)
+
+```
+streamlit==1.51.0
+pandas==2.3.1
+numpy==2.3.1
+scikit-learn==1.8.0
+xgboost==3.2.0
+lightgbm==4.6.0
+plotly==6.5.0
+matplotlib==3.10.7
+seaborn==0.13.2
+python-pptx==1.0.2
+scipy==1.17.0
+```
+
+---
+
+## ❓ Troubleshooting
+
+**`streamlit: command not found`**
+→ Run: `pip install streamlit`
+
+**`ModuleNotFoundError`**
+→ Run: `pip install -r requirements.txt`
+
+**Port already in use**
+→ Run: `streamlit run fraud_dashboard.py --server.port 8502`
+   Then open: http://localhost:8502
+
+**Python not recognized**
+→ Reinstall Python and check "Add Python to PATH" during setup
