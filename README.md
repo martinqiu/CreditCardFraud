@@ -30,23 +30,33 @@ built with Streamlit, scikit-learn, XGBoost, and LightGBM.
 
 ---
 
-## 🚀 Getting Started
+### 🚀 Getting Started (Windows)
 
-### First Time (installs libraries + launches dashboard)
+#### First Time (installs libraries + launches dashboard)
 ```
 Double-click:  install_and_run.bat
 ```
-This will:
-1. Install all required Python libraries automatically
-2. Launch the dashboard
-3. Open your browser at **http://localhost:8501**
 
-### After First Setup (launch only)
+#### After First Setup (launch only)
 ```
 Double-click:  run_dashboard.bat
 ```
 
-### Manual (Terminal / Command Prompt)
+---
+
+### 🍎 Getting Started (Mac / Linux)
+
+#### First Time & Launch
+1. Open your **Terminal** app.
+2. Drag the project folder into the terminal or use `cd` to move into it.
+3. Type the following command and press Enter:
+```bash
+sh setup_mac.sh
+```
+
+---
+
+### 💻 Manual Launch (Any OS)
 ```bash
 pip install -r requirements.txt
 streamlit run fraud_dashboard.py
