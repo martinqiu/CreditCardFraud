@@ -3,6 +3,8 @@
 An interactive machine learning dashboard for credit card fraud detection —
 built with Streamlit, scikit-learn, XGBoost, and LightGBM.
 
+[View Analysis Summary (PDF)](fraud_analysis_summary.pdf)
+
 ---
 
 ## 📁 Files Included
