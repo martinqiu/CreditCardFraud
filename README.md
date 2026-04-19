@@ -51,7 +51,9 @@ openpyxl>=3.1.0
 ## 🚀 Getting Started (Windows)
 
 **Step 1 — Install Python 3.10+** (check **"Add Python to PATH"**).
+
 **Step 2 — First time**: double-click `install_and_run.bat`.
+
 **Step 3 — Subsequent times**: double-click `run_dashboard.bat`.
 
 ---
