@@ -75,17 +75,18 @@ streamlit run fraud_dashboard.py
 ## 📦 Library Versions (from requirements.txt)
 
 ```
-streamlit==1.51.0
-pandas==2.3.1
-numpy==2.3.1
-scikit-learn==1.8.0
-xgboost==3.2.0
-lightgbm==4.6.0
-plotly==6.5.0
-matplotlib==3.10.7
-seaborn==0.13.2
-python-pptx==1.0.2
-scipy==1.17.0
+streamlit>=1.40.0
+pandas>=2.0.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+plotly>=5.18.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+python-pptx>=0.6.21
+scipy>=1.11.0
+openpyxl>=3.1.0
 ```
 
 ---
