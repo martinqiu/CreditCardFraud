@@ -22,25 +22,39 @@ built with Streamlit, scikit-learn, XGBoost, and LightGBM.
 
 ---
 
-## ⚙️ Requirements
+## ⚙️ System Requirements
 
-- **Python 3.10 or higher** — download from https://www.python.org/downloads/
-  - ✅ During installation, check **"Add Python to PATH"**
-- **pip** — comes bundled with Python
+**Python 3.10 or higher** must be installed.
+Download from [python.org/downloads](https://www.python.org/downloads/).
+During installation, check **"Add Python to PATH"**.
+
+
+### 📦 Required Libraries (from requirements.txt)
+
+```
+streamlit>=1.40.0
+pandas>=2.0.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+plotly>=5.18.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+python-pptx>=0.6.21
+scipy>=1.11.0
+openpyxl>=3.1.0
+```
 
 ---
 
-### 🚀 Getting Started (Windows)
+## 🚀 Getting Started (Windows)
 
-#### First Time (installs libraries + launches dashboard)
-```
-Double-click:  install_and_run.bat
-```
+**Step 1 — Install Python 3.10+** (check **"Add Python to PATH"**).
 
-#### After First Setup (launch only)
-```
-Double-click:  run_dashboard.bat
-```
+**Step 2 — First time**: double-click `install_and_run.bat`.
+
+**Step 3 — Subsequent times**: double-click `run_dashboard.bat`.
 
 ---
 
@@ -84,24 +98,7 @@ streamlit run fraud_dashboard.py
 
 ---
 
-## 📦 Library Versions (from requirements.txt)
 
-```
-streamlit>=1.40.0
-pandas>=2.0.0
-numpy>=1.26.0
-scikit-learn>=1.4.0
-xgboost>=2.0.0
-lightgbm>=4.0.0
-plotly>=5.18.0
-matplotlib>=3.8.0
-seaborn>=0.13.0
-python-pptx>=0.6.21
-scipy>=1.11.0
-openpyxl>=3.1.0
-```
-
----
 
 ## ❓ Troubleshooting
 
