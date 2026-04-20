@@ -231,13 +231,7 @@ with st.sidebar:
     st.markdown(f"**📊 Rows:** `{df.shape[0]:,}`")
     st.markdown(f"**📐 Features:** `{df.shape[1]-1}`")
     st.markdown(f"**🎯 Fraud Rate:** `{fraud_count/len(y):.2%}`")
-    st.markdown("---")
-    st.markdown("**Navigation**")
-    nav = st.radio(
-        "Navigation",
-        ["📊 Summary Statistics", "🏆 Model Competition", "⚙️ Hyperparameter Tuning"],
-        label_visibility="collapsed"
-    )
+    # (Navigation section removed to avoid redundancy with top tabs)
     st.markdown("---")
     st.markdown("<p style='color:#adb5bd; font-size:0.75rem; text-align:center;'>Cross-Validation: 5-Fold Stratified</p>",
                 unsafe_allow_html=True)
@@ -264,15 +258,16 @@ for col, label, value, delta_txt in [
 st.markdown("<br>", unsafe_allow_html=True)
 
 # ── Main Tabs ─────────────────────────────────────────────────────────────────
-# ═══════════════════════════════════════════════════════════════════════════════
-# CONTENT LOGIC
-# ═══════════════════════════════════════════════════════════════════════════════
-
-if nav == "📊 Summary Statistics":
+tab1, tab2, tab3 = st.tabs([
+    "📊  Summary Statistics",
+    "🏆  Model Competition",
+    "⚙️  Hyperparameter Tuning",
+])
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 1: SUMMARY STATISTICS
 # ═══════════════════════════════════════════════════════════════════════════════
+with tab1:
     st.markdown("<div class='section-header'>Dataset Overview</div>", unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -422,7 +417,7 @@ if nav == "📊 Summary Statistics":
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 2: MODEL COMPETITION
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "🏆 Model Competition":
+with tab2:
     st.markdown("<div class='section-header'>Classification Competition Leaderboard</div>",
                 unsafe_allow_html=True)
 
@@ -615,7 +610,7 @@ elif nav == "🏆 Model Competition":
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 3: HYPERPARAMETER TUNING
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "⚙️ Hyperparameter Tuning":
+with tab3:
     st.markdown("<div class='section-header'>Interactive Hyperparameter Tuning</div>",
                 unsafe_allow_html=True)
 
