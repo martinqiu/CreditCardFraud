@@ -7,6 +7,24 @@ built with Streamlit, scikit-learn, XGBoost, and LightGBM.
 
 ---
 
+## 📥 Step 1: Download or Clone
+
+Before you can run the dashboard, you must have the files on your computer.
+
+### **Option A: Download ZIP (Easiest)**
+1.  Click the green **Code** button at the top of this GitHub page.
+2.  Select **Download ZIP**.
+3.  **IMPORTANT:** Once downloaded, right-click the ZIP file and select **"Extract All"**. Do not try to run the scripts from inside the zipped folder.
+
+### **Option B: Clone with Git (Professional)**
+1.  Open your Terminal or Command Prompt.
+2.  Run the following command:
+    ```bash
+    git clone https://github.com/your-username/CreditCardFraud.git
+    ```
+
+---
+
 ## 📁 Files Included
 
 | File | Description |
